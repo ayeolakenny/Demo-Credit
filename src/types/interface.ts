@@ -13,6 +13,13 @@ export interface dbConfigInterface {
   version: string;
   useNullAsDefault: boolean;
   connection: dbConnectionParameters;
+  pool?: {
+    min?: number;
+    max?: number;
+  };
+  migrations?: {
+    tableName?: string;
+  };
 }
 
 export interface Transaction {
